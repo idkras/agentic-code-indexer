@@ -19,7 +19,7 @@
   "author": "Agentic Code Indexer",
   "license": "MIT",
   "dependencies": {
-    "acorn": "^8.11.3",
+    "acorn": "^8.15.0",
     "acorn-typescript": "^1.4.13",
     "commander": "^11.1.0",
     "glob": "^10.3.10",

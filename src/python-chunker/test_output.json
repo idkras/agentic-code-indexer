@@ -1,0 +1,93 @@
+{
+  "language": "python",
+  "version": "1.0.0",
+  "processed_files": [],
+  "nodes": [
+    {
+      "id": "file_1",
+      "label": "File",
+      "name": "main.py",
+      "full_name": "test_project_agentic/main.py",
+      "raw_code": null,
+      "location": null,
+      "properties": {},
+      "path": "test_project_agentic/main.py",
+      "absolute_path": "/Users/ilyakrasinsky/workspace/vscode.projects/heroes-unicron-advising-playground/test_project_agentic/main.py",
+      "extension": ".py",
+      "size": 1104,
+      "checksum": "921b5cf86ae14f8c5fd68526b4caa10d8a96e0c8b117ebc35a75204e3f2667e8",
+      "content": "\"\"\"\nMain application entry point.\n\"\"\"\n\nfrom services.user_service import UserService\nfrom services.auth_service import AuthService\nfrom models.user import User\n\n\ndef main():\n    \"\"\"Main application function.\"\"\"\n    print(\"🚀 Starting Agentic Code Indexer Test Application\")\n    \n    # Initialize services\n    user_service = UserService()\n    auth_service = AuthService(user_service)\n    \n    # Create test users\n    user1 = user_service.create_user(\"john@example.com\", \"John Doe\")\n    user2 = user_service.create_user(\"jane@example.com\", \"Jane Smith\")\n    \n    print(f\"Created users: {user1}, {user2}\")\n    \n    # Test authentication\n    session_id = auth_service.create_session(user1)\n    print(f\"Created session: {session_id}\")\n    \n    # Test session validation\n    validated_user = auth_service.validate_session(session_id)\n    print(f\"Validated user: {validated_user}\")\n    \n    # List active users\n    active_users = user_service.list_active_users()\n    print(f\"Active users: {len(active_users)}\")\n    \n    print(\"✅ Application completed successfully!\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+      "language": "python"
+    },
+    {
+      "id": "import_2",
+      "label": "Import",
+      "name": "from services.user_service import UserService",
+      "full_name": "test_project_agentic/main.py::import::services.user_service",
+      "raw_code": null,
+      "location": null,
+      "properties": {},
+      "module": "services.user_service",
+      "alias": null,
+      "imported_names": [
+        "UserService"
+      ],
+      "is_wildcard": false
+    },
+    {
+      "id": "import_3",
+      "label": "Import",
+      "name": "from services.auth_service import AuthService",
+      "full_name": "test_project_agentic/main.py::import::services.auth_service",
+      "raw_code": null,
+      "location": null,
+      "properties": {},
+      "module": "services.auth_service",
+      "alias": null,
+      "imported_names": [
+        "AuthService"
+      ],
+      "is_wildcard": false
+    },
+    {
+      "id": "import_4",
+      "label": "Import",
+      "name": "from models.user import User",
+      "full_name": "test_project_agentic/main.py::import::models.user",
+      "raw_code": null,
+      "location": null,
+      "properties": {},
+      "module": "models.user",
+      "alias": null,
+      "imported_names": [
+        "User"
+      ],
+      "is_wildcard": false
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "file_1",
+      "target_id": "import_2",
+      "type": "IMPORTS",
+      "properties": {}
+    },
+    {
+      "source_id": "file_1",
+      "target_id": "import_3",
+      "type": "IMPORTS",
+      "properties": {}
+    },
+    {
+      "source_id": "file_1",
+      "target_id": "import_4",
+      "type": "IMPORTS",
+      "properties": {}
+    }
+  ],
+  "metadata": {
+    "total_files": 0,
+    "total_nodes": 4,
+    "total_relationships": 3
+  }
+}
