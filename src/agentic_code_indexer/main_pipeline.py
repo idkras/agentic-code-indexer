@@ -61,7 +61,7 @@ class MainPipeline:
             console.print("[yellow]Initializing Neo4j database...[/yellow]")
 
             neo4j_setup = Neo4jSetup(self.neo4j_uri, self.neo4j_user, self.neo4j_password)
-            await neo4j_setup.setup_database()
+            neo4j_setup.setup_complete_schema()
             neo4j_setup.close()
 
             console.print("[green]✓ Database initialized successfully[/green]")
